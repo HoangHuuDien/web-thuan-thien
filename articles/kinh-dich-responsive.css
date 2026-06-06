@@ -1,0 +1,157 @@
+/* Desktop: full-width readable layout */
+@media (min-width: 768px) {
+  html.ladi-desktop-mode,
+  html.ladi-desktop-mode body {
+    background: #fff;
+    overflow-x: hidden;
+  }
+
+  html.ladi-desktop-mode .ladi-wraper {
+    width: 100% !important;
+    max-width: 960px !important;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  html.ladi-desktop-mode .ladi-section {
+    height: auto !important;
+    overflow: visible;
+    padding: 48px 32px;
+  }
+
+  html.ladi-desktop-mode .ladi-section .ladi-container {
+    position: static !important;
+    height: auto !important;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  html.ladi-desktop-mode .ladi-section .ladi-element {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 720px !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  html.ladi-desktop-mode .ladi-headline,
+  html.ladi-desktop-mode .ladi-paragraph {
+    width: 100% !important;
+    max-width: 720px;
+    text-align: center !important;
+  }
+
+  html.ladi-desktop-mode .ladi-group {
+    position: relative !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 720px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  html.ladi-desktop-mode .ladi-group .ladi-element {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  html.ladi-desktop-mode .ladi-accordion {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 720px !important;
+    height: auto !important;
+  }
+
+  html.ladi-desktop-mode .ladi-button {
+    position: relative !important;
+    width: auto !important;
+    min-width: 223px;
+    height: 53px !important;
+    margin: 0 auto;
+  }
+
+  html.ladi-desktop-mode .ladi-image,
+  html.ladi-desktop-mode .ladi-image .ladi-image-background {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 0 auto;
+  }
+
+  html.ladi-desktop-mode #IMAGE423,
+  html.ladi-desktop-mode #IMAGE423 > .ladi-image > .ladi-image-background {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  html.ladi-desktop-mode #IMAGE460,
+  html.ladi-desktop-mode #IMAGE460 > .ladi-image > .ladi-image-background {
+    width: 220px !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+
+  html.ladi-desktop-mode #GALLERY415 {
+    max-width: 420px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 500px;
+  }
+
+  html.ladi-desktop-mode #GALLERY415 > .ladi-gallery {
+    position: relative !important;
+    height: auto !important;
+    min-height: 500px;
+  }
+
+  /* Show content hidden in mobile-only export */
+  html.ladi-desktop-mode #SECTION430,
+  html.ladi-desktop-mode #SECTION420 {
+    display: block !important;
+  }
+
+  /* Hide off-canvas duplicate elements from mobile layout */
+  html.ladi-desktop-mode #BUTTON437,
+  html.ladi-desktop-mode #HEADLINE530 {
+    display: none !important;
+  }
+
+  /* Hero typography */
+  html.ladi-desktop-mode #HEADLINE462 > .ladi-headline {
+    font-size: 48px !important;
+  }
+
+  html.ladi-desktop-mode #HEADLINE461 > .ladi-headline {
+    font-size: 20px !important;
+  }
+
+  /* Decorative background images – reduce clutter on desktop flow */
+  html.ladi-desktop-mode #IMAGE450,
+  html.ladi-desktop-mode #IMAGE453,
+  html.ladi-desktop-mode #IMAGE455 {
+    display: none !important;
+  }
+
+  html.ladi-desktop-mode #SECTION415 > .ladi-overlay,
+  html.ladi-desktop-mode #SECTION420 > .ladi-overlay {
+    display: none !important;
+  }
+}
+
+/* Mobile: keep original narrow LadiPage canvas */
+@media (max-width: 767px) {
+  html.ladi-mobile-mode .ladi-wraper {
+    width: 420px !important;
+    margin: 0 auto;
+  }
+}
