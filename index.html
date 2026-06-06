@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thuận Thiên Xem Huyền Học & Đào Tạo - Thấu suốt bản mệnh, làm chủ tương lai với Tử Vi, Tứ Trụ, Kinh Dịch khoa học." />
+  <title>Thuận Thiên Xem Huyền Học & Đào Tạo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#B91C1C',
+              'red-dark': '#7F1414',
+              'red-light': '#DC2626',
+              cream: '#FFF8F4',
+              peach: '#FDEBD8',
+            },
+          },
+          fontFamily: {
+            display: ['Montserrat', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    .hero-overlay {
+      background: linear-gradient(105deg, rgba(10,10,10,0.92) 45%, rgba(10,10,10,0.75) 100%);
+    }
+
+    .btn-red {
+      background: #B91C1C;
+      transition: all 0.25s ease;
+    }
+    .btn-red:hover {
+      background: #991B1B;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(185, 28, 28, 0.35);
+    }
+
+    .service-card {
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .service-card:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+      transform: translateY(-4px);
+    }
+
+    .quick-link-card:hover {
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      transform: translateY(-2px);
+    }
+
+    .red-header-pattern {
+      background-color: #7F1414;
+      background-image: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06) 0%, transparent 50%);
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800 bg-brand-cream overflow-x-hidden">
+
+  <!-- Navigation -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/90 backdrop-blur-md">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="#" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Thuận Thiên" class="w-10 h-10 rounded-full object-cover shadow-md" />
+        <span class="font-display font-bold text-white text-lg tracking-tight">THUẬN THIÊN</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-300 uppercase tracking-wide">
+        <a href="#pain-points" class="hover:text-white transition-colors">Vấn đề</a>
+        <a href="#solution" class="hover:text-white transition-colors">Giải pháp</a>
+        <a href="#services" class="hover:text-white transition-colors">Dịch vụ</a>
+        <a href="#contact" class="btn-red text-white px-5 py-2.5 rounded-full font-bold text-xs tracking-wide">
+          Đặt Lịch Ngay
+        </a>
+      </div>
+
+      <button id="menu-btn" class="md:hidden p-2 text-white" aria-label="Mở menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-black">
+      <div class="px-4 py-4 flex flex-col gap-3 text-sm font-semibold uppercase">
+        <a href="#pain-points" class="py-2 text-gray-300">Vấn đề</a>
+        <a href="#solution" class="py-2 text-gray-300">Giải pháp</a>
+        <a href="#services" class="py-2 text-gray-300">Dịch vụ</a>
+        <a href="#contact" class="btn-red text-white px-5 py-3 rounded-full font-bold text-center">Đặt Lịch Ngay</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION — StoryBrand layout -->
+  <section id="hero" class="relative min-h-[90vh] flex items-center pt-16">
+    <!-- Background image -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=1920&q=80');"></div>
+    <div class="absolute inset-0 hero-overlay"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 lg:py-24">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left: Text -->
+        <div>
+          <h1 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] leading-[1.1] text-white uppercase tracking-tight mb-6">
+            Thấu Suốt Bản Mệnh –<br/>
+            <span class="text-brand-red-light">Làm Chủ Tương Lai</span>
+          </h1>
+          <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+            Bạn đang đứng trước những lựa chọn mơ hồ về sự nghiệp, tài lộc hay các mối quan hệ?
+            Hãy để <strong class="text-white">Huyền Học (Tử Vi, Tứ Trụ, Kinh Dịch)</strong> trở thành chiếc la bàn khoa học, giúp bạn định vị bản thân và khai phá tiềm năng vô hạn.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="btn-red text-white px-8 py-4 rounded-full font-display font-bold text-sm sm:text-base uppercase tracking-wide text-center">
+              Đặt Lịch Xem Bản Mệnh Ngay
+            </a>
+            <a href="#services" class="px-8 py-4 rounded-full font-display font-bold text-sm sm:text-base uppercase tracking-wide text-center border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300">
+              Khám Phá Khóa Đào Tạo
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Circular visual -->
+        <div class="relative flex justify-center lg:justify-end">
+          <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+            <!-- Main circle — Bát Quái Âm Dương -->
+            <div class="w-full h-full rounded-full overflow-hidden border-4 border-white/25 shadow-2xl bg-brand-red">
+              <img src="images/bagua.png" alt="Bát Quái Âm Dương" class="w-full h-full object-cover" />
+            </div>
+            <!-- Floating badge -->
+            <div class="absolute -top-2 -left-2 sm:-left-6 bg-brand-red text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg uppercase tracking-wide">
+              Huyền Học Khoa Học
+            </div>
+            <!-- Overlapping card -->
+            <div class="absolute -bottom-4 -right-4 sm:-right-8 w-36 sm:w-44 bg-brand-peach rounded-xl shadow-2xl p-3 border border-red-100 rotate-3">
+              <img src="images/logo.png" alt="Thuận Thiên" class="w-14 h-14 rounded-full object-cover mx-auto mb-2 shadow-md" />
+              <p class="text-brand-red font-display font-bold text-xs text-center leading-tight">Tìm Lại Điểm Tựa Giữa Bản Đồ Cuộc Đời</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links Bar (overlapping hero) -->
+  <div class="relative z-10 -mt-8 sm:-mt-12 max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <a href="#services" class="quick-link-card bg-white rounded-2xl px-6 py-5 flex items-center gap-4 shadow-lg transition-all duration-300 border border-gray-100">
+        <div class="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+        </div>
+        <span class="font-display font-bold text-sm uppercase tracking-wide text-gray-900">Xem Bản Mệnh</span>
+      </a>
+      <a href="#services" class="quick-link-card bg-white rounded-2xl px-6 py-5 flex items-center gap-4 shadow-lg transition-all duration-300 border border-gray-100 relative">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-red text-white text-[10px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider">Phổ biến</span>
+        <div class="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        <span class="font-display font-bold text-sm uppercase tracking-wide text-gray-900">Khóa Đào Tạo</span>
+      </a>
+      <a href="#contact" class="quick-link-card bg-white rounded-2xl px-6 py-5 flex items-center gap-4 shadow-lg transition-all duration-300 border border-gray-100">
+        <div class="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        </div>
+        <span class="font-display font-bold text-sm uppercase tracking-wide text-gray-900">Tư Vấn Miễn Phí</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. PAIN POINTS — StoryBrand checklist layout -->
+  <section id="pain-points" class="py-20 sm:py-28 bg-brand-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <!-- Icon -->
+      <div class="w-14 h-14 rounded-full bg-gray-900 flex items-center justify-center mx-auto mb-8">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
+
+      <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl uppercase tracking-tight text-gray-900 leading-tight mb-12">
+        Có Phải Bạn Đang Cảm Thấy<br/>
+        <span class="text-brand-red">Mơ Hồ Về Tương Lai?</span>
+      </h2>
+
+      <div class="grid sm:grid-cols-2 gap-x-12 gap-y-6 text-left mb-10">
+        <div class="flex gap-3 items-start">
+          <div class="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+            <strong class="text-gray-900">Mất định hướng</strong> — Giữa hàng trăm ngã rẽ sự nghiệp, bạn không biết đâu là thế mạnh thực sự và đâu là thời điểm vàng để bứt phá.
+          </p>
+        </div>
+        <div class="flex gap-3 items-start">
+          <div class="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+            <strong class="text-gray-900">Bất ổn trong các mối quan hệ</strong> — Chuyện tình cảm, gia đình hoặc đối tác làm ăn liên tục gặp trục trặc mà không rõ nguyên nhân gốc rễ.
+          </p>
+        </div>
+        <div class="flex gap-3 items-start">
+          <div class="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+            <strong class="text-gray-900">Khủng hoảng niềm tin</strong> — Bạn từng xem nhiều nơi nhưng chỉ nhận lại những lời phán bói toán mơ hồ, mang tính hù dọa khiến bạn thêm hoang mang.
+          </p>
+        </div>
+        <div class="flex gap-3 items-start">
+          <div class="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+            <strong class="text-gray-900">Muốn tự học nhưng bế tắc</strong> — Đam mê bộ môn Huyền Học nhưng lạc lối giữa "biển" kiến thức sách vở phức tạp, không có người dẫn đường thực chiến.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl mx-auto">
+        Nếu bạn đang gặp những vấn đề trên, đừng lo — chúng tôi có giải pháp khoa học, thực tế và dễ áp dụng ngay vào cuộc sống.
+      </p>
+
+      <a href="#solution" class="inline-block btn-red text-white px-10 py-4 rounded-full font-display font-bold text-sm uppercase tracking-wide">
+        Tìm Hiểu Giải Pháp
+      </a>
+    </div>
+  </section>
+
+  <!-- 3. SOLUTION SECTION -->
+  <section id="solution" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl uppercase tracking-tight text-gray-900 leading-tight mb-6">
+        Huyền Học Khoa Học:<br/>
+        <span class="text-brand-red">Điểm Tựa Đột Phá</span> Cho Cuộc Sống
+      </h2>
+      <p class="text-gray-600 text-base sm:text-lg leading-relaxed mb-12 max-w-3xl mx-auto">
+        Chúng tôi không "bói toán" dựa trên sự may rủi. Chúng tôi ứng dụng các hệ thống tri thức phương Đông
+        <strong class="text-gray-900">(Tử Vi, Tứ Trụ, Bát Tự)</strong> như một bộ môn khoa học dự báo hành vi và năng lượng, giúp bạn:
+      </p>
+
+      <div class="grid sm:grid-cols-3 gap-6 text-left">
+        <div class="bg-brand-peach rounded-2xl p-6 border border-red-100">
+          <span class="font-display font-black text-4xl text-brand-red/30">01</span>
+          <h3 class="font-display font-bold text-lg text-gray-900 mt-2 mb-2">Nhìn rõ bức tranh toàn cảnh</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Hiểu đúng về Ưu điểm - Nhược điểm bẩm sinh.</p>
+        </div>
+        <div class="bg-brand-peach rounded-2xl p-6 border border-red-100">
+          <span class="font-display font-black text-4xl text-brand-red/30">02</span>
+          <h3 class="font-display font-bold text-lg text-gray-900 mt-2 mb-2">Nắm bắt thời thế</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Biết rõ khi nào nên "tấn công" để đầu tư, khi nào nên "phòng thủ" để bảo toàn lực lượng.</p>
+        </div>
+        <div class="bg-brand-peach rounded-2xl p-6 border border-red-100">
+          <span class="font-display font-black text-4xl text-brand-red/30">03</span>
+          <h3 class="font-display font-bold text-lg text-gray-900 mt-2 mb-2">Tự làm chủ vận mệnh</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Chuyển từ thế bị động "chờ xem số phận" sang chủ động cải vận bằng tư duy và hành động thực tế.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SERVICES — 3-column card layout -->
+  <section id="services" class="py-20 sm:py-28 bg-brand-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl uppercase tracking-tight text-gray-900">
+          Dịch Vụ Của <span class="text-brand-red">Chúng Tôi</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Card 01: Xem Bản Mệnh -->
+        <div class="service-card bg-white rounded-3xl overflow-hidden transition-all duration-300 flex flex-col">
+          <div class="relative h-52 red-header-pattern flex items-center justify-center">
+            <span class="absolute top-4 left-5 font-display font-black text-6xl text-white/20">01</span>
+            <!-- Bát Tự table graphic -->
+            <div class="bg-white/95 rounded-lg p-3 shadow-lg mx-4 w-full max-w-[200px]">
+              <div class="grid grid-cols-4 gap-1 text-center text-[10px] font-bold mb-1">
+                <span class="text-yellow-700">Năm</span><span class="text-yellow-700">Tháng</span><span class="text-yellow-700">Ngày</span><span class="text-yellow-700">Giờ</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1 text-center text-xs font-bold">
+                <span class="text-green-700">Ất</span><span class="text-red-700">Tý</span><span class="text-green-700">Mão</span><span class="text-yellow-700">Dần</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1 text-center text-xs font-bold mt-1">
+                <span class="text-red-700">Tỵ</span><span class="text-green-700">Mùi</span><span class="text-red-700">Ngọ</span><span class="text-green-700">Thìn</span>
+              </div>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 bg-black py-2 px-4">
+              <span class="text-white text-xs font-display font-bold uppercase tracking-widest">Xem Huyền Học</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-display font-black text-xl uppercase text-gray-900 mb-3 leading-tight">
+              Dịch Vụ Luận Giải Bản Mệnh
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
+              Luận giải chi tiết về Công danh, Tài lộc, Tình duyên, Vận hạn theo năm. Bảo mật 100%, luận giải thực tế, dễ hiểu, có giải pháp ứng dụng ngay (không mê tín dị đoan).
+            </p>
+            <div class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 text-xs font-semibold px-4 py-2 rounded-full mb-5 self-start">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              Cam kết bảo mật 100%
+            </div>
+            <a href="#contact" class="block text-center border-2 border-gray-900 text-gray-900 font-display font-bold text-sm uppercase py-3 rounded-xl mb-3 hover:bg-gray-900 hover:text-white transition-colors">
+              Xem Chi Tiết +
+            </a>
+            <a href="#contact" class="block text-center btn-red text-white font-display font-bold text-sm uppercase py-3 rounded-xl">
+              Đặt Lịch Ngay
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 02: Bát Tự / Tứ Trụ -->
+        <div class="service-card bg-white rounded-3xl overflow-hidden transition-all duration-300 flex flex-col">
+          <div class="relative h-52 red-header-pattern flex items-center justify-center">
+            <span class="absolute top-4 left-5 font-display font-black text-6xl text-white/20">02</span>
+            <img src="images/bagua.png" alt="Bát Quái Âm Dương" class="w-32 h-32 rounded-full object-cover shadow-lg" />
+            <div class="absolute bottom-0 inset-x-0 bg-black py-2 px-4">
+              <span class="text-white text-xs font-display font-bold uppercase tracking-widest">Tử Vi · Tứ Trụ</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-display font-black text-xl uppercase text-gray-900 mb-3 leading-tight">
+              Xem Bát Tự &amp; Tứ Trụ
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
+              Xem số mệnh qua ngày giờ sinh: tài lộc, nghề nghiệp, hôn nhân, thời vận, biến động. Phân tích năng lượng bẩm sinh để định hướng quyết sách chính xác.
+            </p>
+            <div class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 text-xs font-semibold px-4 py-2 rounded-full mb-5 self-start">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Luận giải trong 24–48h
+            </div>
+            <a href="#contact" class="block text-center border-2 border-gray-900 text-gray-900 font-display font-bold text-sm uppercase py-3 rounded-xl mb-3 hover:bg-gray-900 hover:text-white transition-colors">
+              Xem Chi Tiết +
+            </a>
+            <a href="#contact" class="block text-center btn-red text-white font-display font-bold text-sm uppercase py-3 rounded-xl">
+              Đặt Lịch Ngay
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 03: Đào Tạo -->
+        <div class="service-card bg-white rounded-3xl overflow-hidden transition-all duration-300 flex flex-col">
+          <div class="relative h-52 red-header-pattern flex items-center justify-center">
+            <span class="absolute top-4 left-5 font-display font-black text-6xl text-white/20">03</span>
+            <!-- Book / training icon -->
+            <div class="text-center">
+              <svg class="w-20 h-20 text-white/80 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+              <span class="text-white/60 text-xs font-display font-bold uppercase tracking-widest mt-2 block">Thực Chiến</span>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 bg-black py-2 px-4">
+              <span class="text-white text-xs font-display font-bold uppercase tracking-widest">Đào Tạo</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-display font-black text-xl uppercase text-gray-900 mb-3 leading-tight">
+              Chương Trình Đào Tạo Thực Chiến
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
+              Khóa học từ cơ bản đến nâng cao (Tử Vi/Tứ Trụ). Giáo trình tối giản, tập trung luận số thực tế. Tự xem được cho bản thân, gia đình và phát triển thành nghề tay trái.
+            </p>
+            <div class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 text-xs font-semibold px-4 py-2 rounded-full mb-5 self-start">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+              Thu nhập cao từ nghề tay trái
+            </div>
+            <a href="#contact" class="block text-center border-2 border-gray-900 text-gray-900 font-display font-bold text-sm uppercase py-3 rounded-xl mb-3 hover:bg-gray-900 hover:text-white transition-colors">
+              Xem Chi Tiết +
+            </a>
+            <a href="#contact" class="block text-center btn-red text-white font-display font-bold text-sm uppercase py-3 rounded-xl">
+              Đăng Ký Khóa Học
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CTA & FORM -->
+  <section id="contact" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div>
+          <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl uppercase tracking-tight text-gray-900 leading-tight mb-6">
+            Đừng Để Sự Mơ Hồ<br/>
+            <span class="text-brand-red">Lãng Phí Thời Gian</span> Của Bạn!
+          </h2>
+          <p class="text-gray-600 text-base sm:text-lg leading-relaxed mb-8">
+            Cơ hội thay đổi vận mệnh chỉ cách bạn một quyết định. Hãy để lại thông tin, trợ lý của chúng tôi sẽ liên hệ tư vấn lộ trình phù hợp nhất với bạn.
+          </p>
+          <div class="space-y-4 hidden lg:block">
+            <div class="flex items-center gap-3 text-gray-600 text-sm">
+              <div class="w-8 h-8 rounded-full bg-brand-red/10 flex items-center justify-center">
+                <svg class="w-4 h-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              Tư vấn miễn phí lộ trình phù hợp
+            </div>
+            <div class="flex items-center gap-3 text-gray-600 text-sm">
+              <div class="w-8 h-8 rounded-full bg-brand-red/10 flex items-center justify-center">
+                <svg class="w-4 h-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              Bảo mật thông tin 100%
+            </div>
+            <div class="flex items-center gap-3 text-gray-600 text-sm">
+              <div class="w-8 h-8 rounded-full bg-brand-red/10 flex items-center justify-center">
+                <svg class="w-4 h-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              Phản hồi nhanh qua Zalo
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-brand-peach rounded-3xl p-6 sm:p-8 lg:p-10 border border-red-100 shadow-lg">
+          <form id="contact-form" class="space-y-5" novalidate>
+            <div>
+              <label for="fullname" class="block text-sm font-semibold text-gray-800 mb-2">Họ và tên</label>
+              <input type="text" id="fullname" name="fullname" required placeholder="Nguyễn Văn A"
+                class="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-colors" />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-gray-800 mb-2">Số điện thoại (Zalo)</label>
+              <input type="tel" id="phone" name="phone" required placeholder="09xx xxx xxx"
+                class="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-colors" />
+            </div>
+            <div>
+              <label for="service" class="block text-sm font-semibold text-gray-800 mb-2">Dịch vụ bạn quan tâm</label>
+              <select id="service" name="service" required
+                class="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 text-gray-900 focus:outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-colors cursor-pointer">
+                <option value="" disabled selected>-- Chọn dịch vụ --</option>
+                <option value="xem-ban-menh">Xem Bản Mệnh</option>
+                <option value="hoc-huyen-hoc">Học Huyền Học</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-red w-full text-white py-4 rounded-xl font-display font-bold text-sm sm:text-base uppercase tracking-wide mt-2">
+              Gửi Thông Tin - Nhận Tư Vấn Ngay
+            </button>
+            <p id="form-success" class="hidden text-center text-emerald-600 text-sm font-semibold py-2">
+              ✓ Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm nhất.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+      <div class="flex items-center gap-2">
+        <img src="images/logo.png" alt="Thuận Thiên" class="w-7 h-7 rounded-full object-cover" />
+        <span class="font-display font-bold text-gray-300 uppercase text-xs tracking-wide">Thuận Thiên Xem Huyền Học &amp; Đào Tạo</span>
+      </div>
+      <p>&copy; 2026 Thuận Thiên. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const success = document.getElementById('form-success');
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      success.classList.remove('hidden');
+      form.reset();
+      setTimeout(() => success.classList.add('hidden'), 5000);
+    });
+  </script>
+</body>
+</html>
