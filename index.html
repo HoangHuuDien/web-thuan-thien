@@ -1,326 +1,120 @@
 <!DOCTYPE html>
-<html lang="vi" class="scroll-smooth">
+<html lang="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Thuận Thiên | Kinh Dịch | Bát Tự" />
-  <title>Thuận Thiên | Kinh Dịch | Bát Tự</title>
-
+  <meta name="description" content="Thuận Thiên l Kinh Dịch l Bát Tự" />
+  <title>Thuận Thiên l Kinh Dịch l Bát Tự</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brand: {
-              red: '#B91C1C',
-              'red-dark': '#7F1414',
-              'red-light': '#DC2626',
-              cream: '#FFF8F4',
-              peach: '#FDEBD8',
-            },
+            peach: '#FADDD1',
+            'red-brand': '#BF2921',
+            'red-btn': '#E83B30',
+            yellow: '#FFDE59',
           },
           fontFamily: {
-            display: ['Montserrat', 'system-ui', 'sans-serif'],
-            sans: ['Inter', 'system-ui', 'sans-serif'],
+            sans: ['Open Sans', 'system-ui', 'sans-serif'],
           },
         },
       },
     };
   </script>
-
   <style>
-    .hero-overlay {
-      background: linear-gradient(105deg, rgba(10,10,10,0.92) 45%, rgba(10,10,10,0.75) 100%);
-    }
-
-    .btn-red {
-      background: #B91C1C;
-      transition: all 0.25s ease;
-    }
-    .btn-red:hover {
-      background: #991B1B;
-      transform: translateY(-1px);
-      box-shadow: 0 8px 24px rgba(185, 28, 28, 0.35);
-    }
-
-    .service-card {
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    }
-    .service-card:hover {
-      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
-      transform: translateY(-4px);
-    }
-
-    .quick-link-card:hover {
-      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-      transform: translateY(-2px);
-    }
-
-    .red-header-pattern {
-      background-color: #7F1414;
-      background-image: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06) 0%, transparent 50%);
-    }
+    body { font-family: 'Open Sans', sans-serif; }
   </style>
 </head>
+<body class="bg-white text-black antialiased">
 
-<body class="font-sans antialiased text-gray-800 bg-brand-cream overflow-x-hidden">
-
-  <!-- Navigation -->
-  <header class="fixed top-0 inset-x-0 z-50 bg-black/90 backdrop-blur-md">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="images/logo.png" alt="Thuận Thiên" class="w-10 h-10 rounded-full object-cover shadow-md" />
-        <span class="font-display font-bold text-white text-lg tracking-tight">THUẬN THIÊN</span>
-      </a>
-
-      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-300 uppercase tracking-wide">
-        <a href="#principles" class="hover:text-white transition-colors">Nguyên tắc</a>
-        <a href="#services" class="hover:text-white transition-colors">Dịch vụ</a>
-        <a href="https://bit.ly/TuChiaSe" target="_blank" rel="noopener" class="btn-red text-white px-5 py-2.5 rounded-full font-bold text-xs tracking-wide">
-          Tự Chia Sẻ
-        </a>
-      </div>
-
-      <button id="menu-btn" class="md:hidden p-2 text-white" aria-label="Mở menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </nav>
-
-    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-black">
-      <div class="px-4 py-4 flex flex-col gap-3 text-sm font-semibold uppercase">
-        <a href="#principles" class="py-2 text-gray-300">Nguyên tắc</a>
-        <a href="#services" class="py-2 text-gray-300">Dịch vụ</a>
-        <a href="https://bit.ly/TuChiaSe" target="_blank" rel="noopener" class="btn-red text-white px-5 py-3 rounded-full font-bold text-center">Tự Chia Sẻ</a>
-      </div>
-    </div>
+  <!-- Hero: avatar + Thuận Thiên + tagline -->
+  <header class="max-w-lg mx-auto px-4 pt-10 pb-8 text-center">
+    <img
+      src="https://w.ladicdn.com/s500x500/612cc828482e80001266a1b7/avatar-tron-size-nho-20211224092240.png"
+      alt="Thuận Thiên"
+      class="w-36 h-36 sm:w-40 sm:h-40 rounded-full mx-auto mb-4 object-cover"
+    />
+    <p class="text-2xl font-bold mb-4">Thuận Thiên</p>
+    <p class="text-base font-bold leading-relaxed">
+      Đưa ra lựa chọn sáng suốt về sự nghiệp để gặt hái thành công mà không phải mất nhiều năm thử và sai, tốn kém nhiều tiền bạc trong hoang mang.
+    </p>
   </header>
 
-  <!-- 1. HERO SECTION — StoryBrand layout -->
-  <section id="hero" class="relative min-h-[90vh] flex items-center pt-16">
-    <!-- Background image -->
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=1920&q=80');"></div>
-    <div class="absolute inset-0 hero-overlay"></div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 lg:py-24">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <!-- Left: Text -->
-        <div>
-          <p class="font-display font-bold text-2xl sm:text-3xl text-white mb-4">Thuận Thiên</p>
-          <h1 class="font-display font-bold text-xl sm:text-2xl lg:text-3xl leading-[1.35] text-white tracking-tight mb-8 max-w-xl">
-            Đưa ra lựa chọn sáng suốt về sự nghiệp để gặt hái thành công mà không phải mất nhiều năm thử và sai, tốn kém nhiều tiền bạc trong hoang mang.
-          </h1>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#services" class="btn-red text-white px-8 py-4 rounded-full font-display font-bold text-sm sm:text-base uppercase tracking-wide text-center">
-              Xem Dịch Vụ
-            </a>
-            <a href="https://bit.ly/TuChiaSe" target="_blank" rel="noopener" class="px-8 py-4 rounded-full font-display font-bold text-sm sm:text-base uppercase tracking-wide text-center border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300">
-              Tự Chia Sẻ &amp; Nhận Hướng Dẫn
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Circular visual -->
-        <div class="relative flex justify-center lg:justify-end">
-          <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
-            <!-- Main circle — Bát Quái Âm Dương -->
-            <div class="w-full h-full rounded-full overflow-hidden border-4 border-white/25 shadow-2xl bg-brand-red">
-              <img src="images/bagua.png" alt="Bát Quái Âm Dương" class="w-full h-full object-cover" />
-            </div>
-            <!-- Floating badge -->
-            <div class="absolute -top-2 -left-2 sm:-left-6 bg-brand-red text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg uppercase tracking-wide">
-              Huyền Học Khoa Học
-            </div>
-            <!-- Overlapping card -->
-            <div class="absolute -bottom-4 -right-4 sm:-right-8 w-36 sm:w-44 bg-brand-peach rounded-xl shadow-2xl p-3 border border-red-100 rotate-3">
-              <img src="images/logo.png" alt="Thuận Thiên" class="w-14 h-14 rounded-full object-cover mx-auto mb-2 shadow-md" />
-              <p class="text-brand-red font-display font-bold text-xs text-center leading-tight">Thuận Thiên</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Thông báo -->
-  <div class="bg-yellow-300 border-y border-yellow-400">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4">
-      <p class="text-gray-900 text-base leading-relaxed text-center">
-        <strong>Thông báo:</strong> Mình đang trong thời gian tạm nghỉ 1 tháng và sẽ quay trở lại vào tháng 11, trong thời gian này mình sẽ không làm việc, không xem quẻ hay xem lá số bát tự.
-      </p>
-    </div>
+  <div class="bg-yellow max-w-lg mx-auto px-4 py-4 mb-2">
+    <p class="text-base leading-relaxed">
+      Thông báo: Mình đang trong thời gian tạm nghỉ 1 tháng và sẽ quay trở lại vào tháng 11, trong thời gian này mình sẽ không làm việc, không xem quẻ hay xem lá số bát tự.
+    </p>
   </div>
 
-  <!-- Quick Links Bar -->
-  <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-8">
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-      <a href="articles/xem-kinh-dich.html" class="quick-link-card bg-white rounded-2xl px-6 py-5 flex items-center gap-4 shadow-lg transition-all duration-300 border border-gray-100">
-        <div class="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center flex-shrink-0">
-          <img src="images/bagua.png" alt="" class="w-8 h-8 rounded-full object-cover" />
-        </div>
-        <span class="font-display font-bold text-sm uppercase tracking-wide text-gray-900">Xem Quẻ Kinh Dịch</span>
-      </a>
-      <a href="https://www.thuanthienkinhdich.com/battu" target="_blank" rel="noopener" class="quick-link-card bg-white rounded-2xl px-6 py-5 flex items-center gap-4 shadow-lg transition-all duration-300 border border-gray-100">
-        <div class="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center flex-shrink-0">
-          <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-        </div>
-        <span class="font-display font-bold text-sm uppercase tracking-wide text-gray-900">Xem Bát Tự</span>
-      </a>
-      <a href="https://www.thuanthienkinhdich.com/luck" target="_blank" rel="noopener" class="quick-link-card bg-white rounded-2xl px-6 py-5 flex items-center gap-4 shadow-lg transition-all duration-300 border border-gray-100">
-        <div class="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center flex-shrink-0">
-          <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-        </div>
-        <span class="font-display font-bold text-sm uppercase tracking-wide text-gray-900">Khóa học LUCK</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- NGUYÊN TẮC LÀM VIỆC -->
-  <section id="principles" class="py-16 sm:py-20 bg-brand-red-dark">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="font-display font-bold text-lg sm:text-xl uppercase tracking-wide text-yellow-100 mb-8">
-        NGUYÊN TẮC LÀM VIỆC CỦA THUẬN THIÊN
-      </h2>
-      <div class="space-y-3 text-white text-base sm:text-lg leading-relaxed font-semibold">
-        <p><span class="text-yellow-100 underline">Không</span> mê tín dị đoan.</p>
-        <p><span class="text-yellow-100 underline">Không</span> bán đồ phong thủy.</p>
-        <p><span class="text-yellow-100 underline">Không</span> dọa nạt đòi làm lễ, mua bùa.</p>
-        <p><span class="text-yellow-100 underline">Không</span> nhận khách bừa bãi, từ chối làm việc nếu không phù hợp.</p>
-      </div>
+  <!-- Nguyên tắc -->
+  <section class="bg-red-brand text-white max-w-lg mx-auto px-4 py-8 mb-2">
+    <h2 class="text-lg font-bold text-yellow mb-6 leading-relaxed">
+      NGUYÊN TẮC LÀM VIỆC CỦA THUẬN THIÊN
+    </h2>
+    <div class="text-base font-bold leading-relaxed space-y-1">
+      <p><span class="text-yellow underline">Không</span> mê tín dị đoan.</p>
+      <p><span class="text-yellow underline">Không</span> bán đồ phong thủy.</p>
+      <p><span class="text-yellow underline">Không</span> dọa nạt đòi làm lễ, mua bùa.</p>
+      <p><span class="text-yellow underline">Không</span> nhận khách bừa bãi, từ chối làm việc nếu không phù hợp.</p>
     </div>
   </section>
 
-  <!-- Lưu ý tài liệu -->
-  <section id="guide" class="py-16 sm:py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <p class="text-gray-800 text-base sm:text-lg leading-relaxed">
-        <strong class="underline">Lưu ý:</strong> Để giúp các bạn sử dụng các bộ môn Kinh Dịch, Bát Tự đem lại nhiều lợi ích nhất, mình đã viết tài liệu:
-        <strong class="text-brand-red"> Dùng huyền học hiệu quả để đạt được thành công</strong>.
-        Tài liệu này nói rõ điểm mạnh, điểm yếu của từng bộ môn, ví dụ như tại sao không nên dùng Kinh Dịch để xem những sự việc ở quá xa, hay không nên dùng tử vi, bát tự để xem những sự việc gần như hạn năm, hạn tháng, nên sử dụng từng bộ môn vào việc gì.
-        Bạn có thể đọc trước khi xem lá số
-        <a href="https://drive.google.com/file/d/1lrkLVCesfyMmJD1kK3mfWhbVzWmQuduY/view" target="_blank" rel="noopener" class="text-blue-600 font-bold hover:underline">tại đây</a>.
-      </p>
-    </div>
+  <!-- Lưu ý -->
+  <section class="max-w-lg mx-auto px-4 py-8 mb-4">
+    <p class="text-base leading-relaxed">
+      <strong class="underline">Lưu ý:</strong> Để giúp các bạn sử dụng các bộ môn Kinh Dịch, Bát Tự đem lại nhiều lợi ích nhất, mình đã viết tài liệu: <strong class="text-red-brand">Dùng huyền học hiệu quả để đạt được thành công</strong>. Tài liệu này nói rõ điểm mạnh, điểm yếu của từng bộ môn, ví dụ như tại sao không nên dùng Kinh Dịch để xem những sự việc ở quá xa, hay không nên dùng tử vi, bát tự để xem những sự việc gần như hạn năm, hạn tháng, nên sử dụng từng bộ môn vào việc gì. Bạn có thể đọc trước khi xem lá số <a href="https://drive.google.com/file/d/1lrkLVCesfyMmJD1kK3mfWhbVzWmQuduY/view" target="_blank" rel="noopener" class="text-blue-600 font-bold underline">tại đây</a>.
+    </p>
   </section>
 
-  <!-- DỊCH VỤ -->
-  <section id="services" class="py-20 sm:py-28 bg-brand-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  <!-- 5 dịch vụ -->
+  <section class="max-w-lg mx-auto px-4 pb-8 space-y-6">
 
-        <!-- Xem Quẻ Kinh Dịch -->
-        <a href="articles/xem-kinh-dich.html" class="service-card bg-brand-peach rounded-3xl overflow-hidden transition-all duration-300 flex flex-col border border-black/10 shadow-lg hover:shadow-xl">
-          <div class="h-44 bg-brand-peach flex items-center justify-center p-4">
-            <img src="images/bagua.png" alt="Xem Quẻ Kinh Dịch" class="w-28 h-28 rounded-full object-cover shadow-md" />
-          </div>
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="font-display font-bold text-2xl sm:text-3xl text-brand-red mb-3 leading-tight">Xem Quẻ Kinh Dịch</h3>
-            <p class="text-gray-800 text-base leading-relaxed flex-1">
-              Hỏi về tài lộc, hợp tác, tình cảm, hôn nhân, công việc, thăng tiến, con cái, giấy tờ, ...
-            </p>
-          </div>
-        </a>
+    <a href="articles/xem-kinh-dich.html" class="block bg-peach border border-black rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow">
+      <h3 class="text-3xl font-bold text-red-btn leading-tight mb-3">Xem Quẻ Kinh Dịch</h3>
+      <p class="text-base leading-relaxed">Hỏi về tài lộc, hợp tác, tình cảm, hôn nhân, công việc, thăng tiến, con cái, giấy tờ, ...</p>
+    </a>
 
-        <!-- Xem & Tìm SĐT -->
-        <a href="https://www.thuanthienkinhdich.com/sdt" target="_blank" rel="noopener" class="service-card bg-brand-peach rounded-3xl overflow-hidden transition-all duration-300 flex flex-col border border-black/10 shadow-lg hover:shadow-xl">
-          <div class="h-44 bg-brand-peach flex items-center justify-center p-4">
-            <svg class="w-20 h-20 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="font-display font-bold text-2xl sm:text-3xl text-brand-red mb-3 leading-tight">Xem &amp; Tìm SĐT</h3>
-            <p class="text-gray-800 text-base leading-relaxed flex-1">
-              Xem SĐT đang dùng ảnh hưởng tốt hay xấu tới cuộc sống qua góc nhìn Kinh Dịch.
-            </p>
-          </div>
-        </a>
+    <a href="https://www.thuanthienkinhdich.com/sdt" target="_blank" rel="noopener" class="block bg-peach border border-black rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow">
+      <h3 class="text-3xl font-bold text-red-btn leading-tight mb-3">Xem &amp; Tìm SĐT</h3>
+      <p class="text-base leading-relaxed">Xem SĐT đang dùng ảnh hưởng tốt hay xấu tới cuộc sống qua góc nhìn Kinh Dịch.</p>
+    </a>
 
-        <!-- Xem Bát Tự -->
-        <a href="https://www.thuanthienkinhdich.com/battu" target="_blank" rel="noopener" class="service-card bg-brand-peach rounded-3xl overflow-hidden transition-all duration-300 flex flex-col border border-black/10 shadow-lg hover:shadow-xl">
-          <div class="h-44 bg-brand-peach flex items-center justify-center p-4">
-            <div class="bg-white/95 rounded-lg p-3 shadow-lg w-full max-w-[180px]">
-              <div class="grid grid-cols-4 gap-1 text-center text-[10px] font-bold mb-1">
-                <span class="text-yellow-700">Năm</span><span class="text-yellow-700">Tháng</span><span class="text-yellow-700">Ngày</span><span class="text-yellow-700">Giờ</span>
-              </div>
-              <div class="grid grid-cols-4 gap-1 text-center text-xs font-bold">
-                <span class="text-green-700">Ất</span><span class="text-red-700">Tý</span><span class="text-green-700">Mão</span><span class="text-yellow-700">Dần</span>
-              </div>
-            </div>
-          </div>
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="font-display font-bold text-2xl sm:text-3xl text-brand-red mb-3 leading-tight">Xem Bát Tự</h3>
-            <p class="text-gray-800 text-base leading-relaxed flex-1">
-              Xem số mệnh qua ngày giờ sinh: tài lộc, nghề nghiệp, hôn nhân, thời vận, biến động,...
-            </p>
-          </div>
-        </a>
+    <a href="https://www.thuanthienkinhdich.com/battu" target="_blank" rel="noopener" class="block bg-peach border border-black rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow">
+      <h3 class="text-3xl font-bold text-red-btn leading-tight mb-3">Xem Bát Tự</h3>
+      <p class="text-base leading-relaxed">Xem số mệnh qua ngày giờ sinh: tài lộc, nghề nghiệp, hôn nhân, thời vận, biến động,...</p>
+    </a>
 
-        <!-- Sách Thuận Thiên -->
-        <a href="https://www.thuanthienkinhdich.com/sachthuanthien" target="_blank" rel="noopener" class="service-card bg-brand-peach rounded-3xl overflow-hidden transition-all duration-300 flex flex-col border border-black/10 shadow-lg hover:shadow-xl">
-          <div class="h-44 bg-brand-peach flex items-center justify-center p-4">
-            <svg class="w-20 h-20 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
-          </div>
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="font-display font-bold text-2xl sm:text-3xl text-brand-red mb-3 leading-tight">Sách Thuận Thiên</h3>
-            <p class="text-gray-800 text-base leading-relaxed flex-1">
-              Miễn phí xem lá số bát tự khi mua sách Thuận Thiên, do chính tay mình viết.
-            </p>
-          </div>
-        </a>
+    <a href="https://www.thuanthienkinhdich.com/sachthuanthien" target="_blank" rel="noopener" class="block bg-peach border border-black rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow">
+      <h3 class="text-3xl font-bold text-red-btn leading-tight mb-3">Sách Thuận Thiên</h3>
+      <p class="text-base leading-relaxed">Miễn phí xem lá số bát tự khi mua sách Thuận Thiên, do chính tay mình viết.</p>
+    </a>
 
-        <!-- Khóa học LUCK -->
-        <a href="https://www.thuanthienkinhdich.com/luck" target="_blank" rel="noopener" class="service-card bg-brand-peach rounded-3xl overflow-hidden transition-all duration-300 flex flex-col border border-black/10 shadow-lg hover:shadow-xl sm:col-span-2 lg:col-span-1">
-          <div class="h-44 bg-brand-peach flex items-center justify-center p-4">
-            <span class="font-display font-black text-5xl text-brand-red/80 tracking-tight">LUCK</span>
-          </div>
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="font-display font-bold text-2xl sm:text-3xl text-brand-red mb-3 leading-tight">Khóa học LUCK</h3>
-            <p class="text-gray-800 text-base leading-relaxed flex-1">
-              Làm thế nào để ĐỔI ĐỜI mà KHÔNG CẦN quan tâm đến số mệnh. (Và không bị vướng vào nợ)
-            </p>
-          </div>
-        </a>
+    <a href="https://www.thuanthienkinhdich.com/luck" target="_blank" rel="noopener" class="block bg-peach border border-black rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow">
+      <h3 class="text-3xl font-bold text-red-btn leading-tight mb-3">Khóa học LUCK</h3>
+      <p class="text-base leading-relaxed">Làm thế nào để ĐỔI ĐỜI mà KHÔNG CẦN quan tâm đến số mệnh. (Và không bị vướng vào nợ)</p>
+    </a>
 
-      </div>
-    </div>
   </section>
 
   <!-- CTA -->
-  <section id="contact" class="py-20 sm:py-28 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <a href="https://bit.ly/TuChiaSe" target="_blank" rel="noopener" class="inline-block btn-red text-yellow-100 px-10 sm:px-14 py-5 sm:py-6 rounded-lg font-display font-bold text-lg sm:text-xl uppercase tracking-wide border-4 border-black shadow-xl hover:shadow-2xl transition-all">
-        TỰ CHIA SẺ &amp;<br class="sm:hidden" /> NHẬN HƯỚNG DẪN
+  <section class="bg-peach py-10 px-4">
+    <div class="max-w-lg mx-auto">
+      <a
+        href="https://bit.ly/TuChiaSe"
+        target="_blank"
+        rel="noopener"
+        class="block bg-red-btn text-yellow text-center text-xl font-bold leading-snug py-5 px-4 border-4 border-black rounded-md shadow-lg hover:opacity-95 transition-opacity"
+      >
+        TỰ CHIA SẺ &amp;<br />NHẬN HƯỚNG DẪN
       </a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-      <div class="flex items-center gap-2">
-        <img src="images/logo.png" alt="Thuận Thiên" class="w-7 h-7 rounded-full object-cover" />
-        <span class="font-display font-bold text-gray-300 uppercase text-xs tracking-wide">Thuận Thiên | Kinh Dịch | Bát Tự</span>
-      </div>
-      <p>&copy; 2026 Thuận Thiên. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-    });
-  </script>
 </body>
 </html>
